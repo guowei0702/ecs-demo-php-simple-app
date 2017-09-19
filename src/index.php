@@ -26,6 +26,7 @@
                 <p>This is new version 7.</p>
                 <p>This is new version 8.</p>
                 <p>This is new version 9.</p>
+                <p>This is new version 10.</p>
                 <p>Your PHP application is now running on a container in Amazon ECS.</p>
                 <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
                 <?php
