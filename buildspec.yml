@@ -4,9 +4,12 @@ phases:
     commands:
       - $(aws ecr get-login)
       - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
+      - printf ${CODEBUILD_RESOLVED_SOURCE_VERSION}
   build:
     commands:
-      - docker build --tag "${REPOSITORY_URI}:${TAG}" .
+      - printf ${REPOSITORY_URI}
+      - docker build --tag 305890642658.dkr.ecr.us-east-2.amazonaws.com/ecs-c-repos-r9v47t2mloef
+:"${TAG}" .
   post_build:
     commands:
       - docker push "${REPOSITORY_URI}:${TAG}"
