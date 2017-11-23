@@ -8,8 +8,8 @@ phases:
   build:
     commands:
       - printf ${REPOSITORY_URI}
-      - docker build --tag 305890642658.dkr.ecr.us-east-2.amazonaws.com/ecs-c-repos-r9v47t2mloef
-:"${TAG}" .
+      - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/ecs-c-repos-r9v47t2mloef
+:${TAG}" .
   post_build:
     commands:
       - docker push "${REPOSITORY_URI}:${TAG}"
