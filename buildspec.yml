@@ -4,7 +4,7 @@ phases:
     commands:
       - $(aws ecr get-login)
       - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-      - printf ${CODEBUILD_RESOLVED_SOURCE_VERSION}
+      - printf '{"CODEBUILD_RESOLVED_SOURCE_VERSION"':"%s"}' ${CODEBUILD_RESOLVED_SOURCE_VERSION}
   build:
     commands:
       - printf '{"repository_uri"':"%s"}' ${REPOSITORY_URI}
