@@ -6,10 +6,10 @@ phases:
       - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
   build:
     commands:
-      - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/ecs-c-repos-r9v47t2mloef:latest" .
+      - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-registry-01:latest" .
   post_build:
     commands:
-      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/ecs-c-repos-r9v47t2mloef:latest"
+      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-registry-01:latest"
       - printf '{"tag":"%s"}' $TAG > build.json
 artifacts:
   files: build.json
