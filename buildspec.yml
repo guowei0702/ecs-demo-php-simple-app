@@ -7,7 +7,7 @@ phases:
       - printf ${CODEBUILD_RESOLVED_SOURCE_VERSION}
   build:
     commands:
-      - printf ${REPOSITORY_URI}
+      - printf '{"repository_uri"':"%s"}' ${REPOSITORY_URI}
       - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/ecs-c-repos-r9v47t2mloef:${TAG}" .
   post_build:
     commands:
