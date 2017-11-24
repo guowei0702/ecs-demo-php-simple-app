@@ -5,7 +5,7 @@ phases:
       - $(aws ecr get-login)
   build:
     commands:
-      - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:latest" .
+      - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:1" .
   post_build:
     commands:
-      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:latest"
+      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:2"
