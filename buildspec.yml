@@ -12,4 +12,4 @@ phases:
       - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:${TAG}"
       - printf '{"tag":"%s"}' $TAG > build.json
 artifacts:
-files: build.json
+  files: build.json
