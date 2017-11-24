@@ -8,4 +8,4 @@ phases:
       - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:1" .
   post_build:
     commands:
-      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:2"
+      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:1"
