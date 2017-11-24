@@ -3,13 +3,9 @@ phases:
   pre_build:
     commands:
       - $(aws ecr get-login)
-      - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
   build:
     commands:
-      - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-registry-01:latest" .
+      - docker build --tag "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:latest" .
   post_build:
     commands:
-      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-registry-01:latest"
-      - printf '{"tag":"%s"}' $TAG > build.json
-artifacts:
-  files: build.json
+      - docker push "305890642658.dkr.ecr.us-east-2.amazonaws.com/cicd-demo-ecr-01:latest"
