@@ -17,9 +17,9 @@
             <div class="hero-unit">
                 <h1 style="color:orange;">Hello AWS World!</h1>
                 <h1 style="color:orange;">Amazon ECS Awesome!</h1>
-                <h1 style="color:orange;">Jenkins is good!</h1>
+                <h1 style="color:orange;">Jenkins is awsome!</h1>
                 <h2>Congratulations</h2>
-                <p>This is new version 3.</p>
+                <p>This is new version 1.</p>
                 <p>Your PHP application is now running on a container in Amazon ECS.</p>
                 <p>Your PHP application is now running on a container in Amazon ECS.</p>
                 <p>The container is running PHP version <?php echo phpversion(); ?>.</p>
